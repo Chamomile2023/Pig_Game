@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+h1,h3,button{
+    text-transform: uppercase;
+}
+.container{
+    max-width: 100%;
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.main{
+    max-width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_hero{
+    position: relative;
+}
+.main_dice_img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%);
+}
+.main_new_game_btn, .main_dice, .main_hold{
+    background-color: rgba(221, 212, 212, 0.8);
+    padding: 10px 25px 1px 18px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    cursor: pointer;
+}
+button:active{
+    transform: translate(-50%, 3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.main_new_game_btn{
+    top: 8%;
+}
+.dice{
+    width: 20px;
+    height: 20px;
+}
+.main_dice{
+    display: flex;
+    align-items: center;
+    top: 58%;
+}
+.main_hold{
+    top: 75%;
+}
+.main_box{
+    display: flex;
+    justify-content: center;
+}
+.main_left, .main_right{
+    max-width: 100%;
+    width: 450px;
+    height: 450px;
+    background-color: rgba(221, 212, 212, 0.6);
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+.main_right{
+    border-radius: 0 10px 10px 0;
+}
+.player--active{
+    background-color: rgba(221, 212, 212, 0.4);
+}
+.main_player{
+    color:#fff;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0 0 0;
+}
+.main_counting{
+    color: #bf2e34;
+    font-size: 65px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.main_little_box{
+    width: 200px;
+    height: 120px;
+    background-color: #bf2e34;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translate(-50%);
+}
+.main_current{
+    padding: 15px 0 10px 0;
+}
+.main_little_counter{
+    font-size: 30px;
+}
+.hidden{
+    display: none;
+}
+.player--winner{
+    background-color: #2f2f2f;
+    color: #bf2e34;
+}
+@media screen and (max-width: 780px){
+    .container{
+        width: 760px;
+        margin: 0 auto;
+    }
+    .main_left, .main_right{
+        max-width: 350px;
+    }
+    .main_new_game_btn, .main_dice, .main_hold{
+        padding: 7px 18px 1px 18px;
+        font-size: 16px;
+    }
+    .main_little_box{
+        width: 160px;
+        height:110px;
+    }
+    .main_dice{
+        top: 60%;
+    }
+    .main_hold{
+        top: 77%;
+    }
+    .main_player{
+        font-size: 33px;
+        padding: 30px 0 0 0;
+    }
+}
+@media screen and (max-width: 638px){
+    .container{
+        width: 618px;
+    }
+    .main_left, .main_right{
+        max-width: 280px;
+    }
+    .main_new_game_btn, .main_dice, .main_hold{
+        padding: 6px 12px 0px 12px;
+        font-size: 14px;
+    }
+    .main_little_box{
+        width: 120px;
+        height:110px;
+    }
+    .main_dice{
+        top: 60%;
+    }
+    .main_hold{
+        top: 77%;
+    }
+    .main_player{
+        font-size: 25px;
+        padding: 35px 0 0 0;
+    }
+    .main_counting {
+        font-size: 50px;
+        padding-top: 40px;
+    }
+}
+@media screen and (max-width: 498px){
+    .container{
+        width: 478px;
+    }
+    .main_left, .main_right{
+        max-width: 220px;
+    }
+    .main_new_game_btn, .main_dice, .main_hold{
+        padding: 5px 8px 0px 8px;
+    }
+    .main_little_box{
+        width: 100px;
+        height:100px;
+        left: 50%;
+        bottom: 35%;
+    }
+    .main_new_game_btn{
+        top: 5%;
+    }
+    .main_dice{
+        top: 70%;
+    }
+    .main_hold{
+        top: 82%;
+    }
+    .main_player{
+        font-size: 22px;
+        padding: 60px 0 0 0;
+    }
+    .main_counting {
+        font-size: 40px;
+        padding-top: 20px;
+    }
+    .main_current, .main_little_counter{
+        font-size: 18px;
+    }
+    .main_dice_img {
+        width: 80px;
+        height: 80px;
+        top: 22%;
+    }
+}
+@media screen and (max-width: 320px){
+    .container{
+        width: 300px;
+    }
+    .main_dice_img {
+        width: 50px;
+        height: 50px;
+        top: 24%;
+    }
+}
